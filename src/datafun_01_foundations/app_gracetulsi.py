@@ -1,6 +1,6 @@
-"""app_yourname.py - Project script.
+"""app_gracetulsi.py - Project script.
 
-Author: Your Name or Alias
+Author: Grace Tulsi
 Date: 2026-01
 
   Practice key Python skills related to:
@@ -17,15 +17,6 @@ Date: 2026-01
 OBS:
   This is your file to practice and customize.
   Find the TODO comments, and as you complete each task, remove the TODO note.
-
-TODO: Change the Author line of the docstring above to your name or alias.
-
-TODO: RENAME this file from app_yourname.py to something
-      that includes your name or alias, e.g., app_stellar_analytics.py.
-
-TODO: Update the opening line of the docstring above to match the new file name.
-
-TODO: Update the associated `uv run python` command in the README.md file.
 
 """
 
@@ -54,24 +45,11 @@ LOG: logging.Logger = get_logger("P01", level="INFO")
 
 MY_ANALYTICS_COMPANY: Final[str] = "DataFun Analytics"
 MY_EMPLOYEE_COUNT: Final[int] = 150
-
-# See the other file for examples.
-# TODO: Declare and initialize a string (str) variable of your choice below:
-
-
-# TODO: Declare and initialize an integer (int) variable of your choice below:
-
-
-# TODO: Declare and initialize a float (float) variable of your choice below:
-
-
-# TODO: Declare and initialize a boolean (bool) variable of your choice (True or False) below:
-
-
-# TODO: Declare and initialize a list of strings (list[str]) variable of your choice below:
-# REQ: Strings must be in quotes and items are separated by commas,
-# REQ: The list is wrapped in square brackets. (See the other file for examples.)
-
+FAVORITE_SUBJECT: Final[str] = "Mathematics"
+GRADUATION_YEAR: Final[int] = 2026
+BEAUTIFUL_NUMBER: Final[float] = 3.14159
+IS_GEEK: Final[bool] = True
+MY_ROLES: Final[list[str]] = ["Learning Center Coordinator", "Math Instructor", "Phi Theta Kappa Advisor", "Student", "Mother"]
 
 # === DECLARE A FUNCTION TO FORMAT THE INFORMATION ===
 
