@@ -75,12 +75,11 @@ def get_summary() -> str:
     Custom Information:
         Company name: {MY_ANALYTICS_COMPANY}
         Employee count: {MY_EMPLOYEE_COUNT}
-        TODO: Add your other global variables below:
-
-
-
-
-
+        Favorite Subject: {FAVORITE_SUBJECT}
+        Graduation Year: {GRADUATION_YEAR}
+        Beautiful Number: {BEAUTIFUL_NUMBER}
+        Is a Geek:{IS_GEEK}
+        My Roles: {", ".join(MY_ROLES)}
     """
 
     LOG.info("Generated formatted multi-line SUMMARY string.")
@@ -101,8 +100,7 @@ def get_statistics() -> str:
     # Initialize sample data - snowfall measurements in inches.
     # REQ: Vary ONE of the sample data values.
     # See how the statistics change when you do.
-    # TODO: Change one of the values in the list below.
-    snowfall_inches: list[float] = [2.5, 3.5, 4.5, 5.5, 6.5]
+    snowfall_inches: list[float] = [2.5, 3.5, 4.5, 5.5, 12.5]
 
     # Calculate descriptive statistics below - see other file for examples.
 
@@ -111,25 +109,24 @@ def get_statistics() -> str:
 
     # Example : Calculate count of measurements.
     count: int = len(snowfall_inches)
-
-    # TODO: Calculate minimum and maximum snowfall (see other file for examples).
+    minimum_snowfall: float = min(snowfall_inches) if count > 0 else 0.0
+    maximum_snowfall: float = max(snowfall_inches) if count > 0 else 0.0
+    snowfall_range: float = (maximum_snowfall - minimum_snowfall) if count > 0 else 0.0
 
     # Use the statistics module to calculate average.
     average: float = statistics.mean(snowfall_inches) if count > 0 else 0.0
-
-    # TODO: Use the statistics module to calculate standard deviation below:
+    stdev: float = statistics.stdev(snowfall_inches) if count > 1 else 0.0
 
     # Build a formatted multi-line string using f and triple quotes.
     summary: str = f"""
     Descriptive Statistics for Snowfall (inches):
         Total snowfall: {total:.2f} inches
-        TODO: Add your count of measurements below:
-
-        TODO: Add your minimum and maximum snowfall below:
-
+        Count of measurements: {count}
+        Minimum snowfall: {minimum_snowfall:.2f} inches
+        Maximum snowfall: {maximum_snowfall:.2f} inches
+        Range: {snowfall_range:.2f} inches
         Average snowfall: {average:.2f} inches
-        TODO: Add your standard deviation below:
-
+        Standard deviation: {stdev:.2f} inches
     """
 
     LOG.info("Generated formatted multi-line SUMMARY string.")
