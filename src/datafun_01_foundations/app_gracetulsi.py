@@ -49,7 +49,13 @@ FAVORITE_SUBJECT: Final[str] = "Mathematics"
 GRADUATION_YEAR: Final[int] = 2026
 BEAUTIFUL_NUMBER: Final[float] = 3.14159
 IS_GEEK: Final[bool] = True
-MY_ROLES: Final[list[str]] = ["Learning Center Coordinator", "Math Instructor", "Phi Theta Kappa Advisor", "Student", "Mother"]
+MY_ROLES: Final[list[str]] = [
+    "Learning Center Coordinator",
+    "Math Instructor",
+    "Phi Theta Kappa Advisor",
+    "Student",
+    "Mother",
+]
 
 # === DECLARE A FUNCTION TO FORMAT THE INFORMATION ===
 
